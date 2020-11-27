@@ -119,6 +119,10 @@
           }
         }
       }
-    }},
-  "defaultProject": "TechPrime"
+    }
+  },
+  "defaultProject": "TechPrime",
+  "cli": {
+    "analytics": false
+  }
 }
