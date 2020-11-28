@@ -1,8 +1,7 @@
 .flow
 {
     height: 200px;
-    background-color:#039be6;
-    
+    background-color:#039be6;  
 }
 .overlap
 {
@@ -12,8 +11,11 @@
     margin-top: -46px;
 }
 .add-form
-{    margin-top: 30px ;
+{    
+    margin-top: 30px ;
     width: 90%;
+    margin-left: 5%;
+    margin-bottom: 50px;
 }
 .field
 {

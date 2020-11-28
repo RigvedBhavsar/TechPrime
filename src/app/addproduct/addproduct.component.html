@@ -1,30 +1,48 @@
 <div>
     <div class="flow">
         <div style="padding:30px;">
-            <button mat-icon-button aria-label="Example icon-button with arrow_back" style="color:white; text-align: left; margin-top: 30px;">
+            <button mat-icon-button aria-label="Example icon-button with arrow_back" 
+            style="color:white; text-align: left; margin-top: 30px;" routerLink="/list">
                 <mat-icon style="font-size: 30px;">arrow_back</mat-icon>
               </button>
             <span >
-                <button type="button" class="btn btn-light" style="margin-left: 70% ;">Save</button>
+                <button type="button" (click)="saveData()" 
+                class="btn btn-light" style="margin-left: 70% ;">Save</button>
             </span>
         </div>
     </div>
     <div class="overlap">
         <div>
             <nav style=" background-color: white;height: 46px; border-bottom: 1px solid#f2f2f2;"></nav>
-            
             <form class="add-form">
-                <mat-form-field class="field">
-                  <mat-label>Product Name</mat-label>
-                  <input matInput placeholder="Ex.Book Name" >
+                <!-- Product Name -->
+                    <mat-form-field class="field" appearance="fill">
+                        <mat-label>Product Name</mat-label>
+                        <input matInput placeholder="Ex.Book Name" >
+                    </mat-form-field>
+                <!-- Catogaries -->
+                    <mat-form-field class="field" appearance="fill">
+                        <mat-label>Categories</mat-label>
+                        <input matInput placeholder="Ex.Canvas Print, Nature.." >
+                    </mat-form-field>
+                <!-- Tags -->
+                <mat-form-field class="field" appearance="fill">
+                    <mat-label>Tags</mat-label>
+                    <input matInput placeholder="Ex.Canvas Print, Nature.." >
                 </mat-form-field>
-
-
-                <mat-form-field class="field">
-                  <mat-label>Categories</mat-label>
-                  <input matInput placeholder="Ex. Canvas print, Nature">
+            
+                <!-- Price -->
+                <mat-form-field appearance="fill" class="field">
+                    <mat-label>price</mat-label>
+                    <input matInput placeholder="Ex.1,2,3">
                 </mat-form-field>
-              </form>
+                
+                <!-- Quantity -->
+                <mat-form-field appearance="fill" class="field">
+                    <mat-label>Quantity</mat-label>
+                    <input matInput placeholder="Ex.1,2,3">
+                </mat-form-field>
+            </form>
         </div>
     </div>
 </div>
