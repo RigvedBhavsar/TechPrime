@@ -21,56 +21,24 @@
               </tr>
             </thead>
             <tbody>
-              <tr>
-                <th scope="row">1</th>
-                <td>A walk amongts friday</td>
-                <td>Canvas print</td>
-                <td>$10.24</td>
-                <td>3</td>
-                <td>Active</td>
-
-              </tr>
-              <tr>
-                <th scope="row">2</th>
-                <td>Brain Lake Canvas Print</td>
-                <td>Canvas print</td>
-                <td>$24.63</td>
-                <td>92</td>
-                <td>Active</td>
-              </tr>
-              <tr>
-                <th scope="row">3</th>
-                <td>Fall Glow- Canvas Print</td>
-                <td>Canvas print</td>
-                <td>$45</td>
-                <td>60</td>
-                <td>Active</td>
-              </tr>
-              <tr>
-                <th scope="row">4</th>
-                <td>First Snow- Canvas Print</td>
-                <td>Canvas print</td>
-                <td>$69</td>
-                <td>101</td>
-                <td>Inactive</td>
-              </tr>
-              <tr>
-                <th scope="row">5</th>
-                <td>Lago di Brains</td>
-                <td>Canvas print</td>
-                <td>$10</td>
-                <td>19</td>
-                <td>Active</td>
-              </tr>
-              <tr>
-                <th scope="row">6</th>
-                <td>Lago di Scarpio</td>
-                <td>Canvas print</td>
-                <td>$59</td>
-                <td>101</td>
-                <td>Inactive</td>
-              </tr>
-
+                <tr style="color: black;" *ngFor="let data of Products ;let i = index">
+                    <td>{{i+1}}</td>
+                    <td>{{data.name}}</td>
+                    <td>{{data.category}}</td>
+                    <td>${{data.price}}</td>
+                    <td>    
+                        <!-- color ball logic accordng to quatity -->
+                        <mat-icon  style="font-size: 10px;color:red">
+                            circle
+                        </mat-icon>
+                        {{data.quantity}}
+                    </td>
+                    <td>
+                        <!-- tick logic according to activity status -->
+                        <mat-icon style="color:green">check_circle</mat-icon>
+                        {{data.activity}}
+                    </td>
+                </tr>
             </tbody>
           </table>
     </div>
