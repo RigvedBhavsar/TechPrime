@@ -9,8 +9,8 @@ import {Product} from './product';
 })
 export class ConnectService {
 
-    private _addurl ="http://localhost:3000/api/addProduct";
-    private _viewurl="http://localhost:3000/api/viewProducts";
+    private _addurl ="http://localhost:3000/product/post";
+    private _viewurl="http://localhost:3000/product/get";
 
     constructor(private http : HttpClient) { }
 
