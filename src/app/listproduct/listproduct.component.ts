@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
-
 import {ConnectService} from '../connect.service';
+
 @Component({
   selector: 'app-listproduct',
   templateUrl: './listproduct.component.html',
@@ -18,5 +18,6 @@ export class ListproductComponent implements OnInit {
             this.Products=data
           }
         );
+        console.log(this.Products);
     }
 }
