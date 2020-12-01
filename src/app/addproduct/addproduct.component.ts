@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, Output } from '@angular/core';
 import {ConnectService} from '../connect.service';
 import {FormBuilder, Validators} from '@angular/forms';
 import {Router} from '@angular/router';
@@ -16,7 +16,9 @@ export class AddproductComponent implements OnInit {
                 ) { }
 
     ngOnInit(): void {}
-
+    @Output() data :string;
+  
+    
     userForm= this.fobj.group(
     {
         name:['', Validators.required],
@@ -38,3 +40,6 @@ export class AddproductComponent implements OnInit {
         this.router.navigate(['/']);
     }
 }
+
+
+
